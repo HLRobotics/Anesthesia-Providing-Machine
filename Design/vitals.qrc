@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="ICU">
+    <file>logo.ico</file>
+    <file>vital.jpg</file>
+  </qresource>
+</RCC>
