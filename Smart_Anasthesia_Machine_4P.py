@@ -70,8 +70,8 @@ class Ui_Dialog(object):
         self.pushButton.setText(_translate("Dialog", "Get Live Readings"))
         self.pushButton_2.setText(_translate("Dialog", "Give Anasthesia"))
         self.label_4.setText(_translate("Dialog", "Anes. Rate:"))
-        self.label_5.setText(_translate("Dialog", "Par1. Rate:"))
-        self.label_6.setText(_translate("Dialog", "Par2. Rate:"))
+        self.label_5.setText(_translate("Dialog", "BIS. Rate:"))
+        self.label_6.setText(_translate("Dialog", "Tem. Rate:"))
 
     def Get_LiveReadings(self):
         HeartRate=random.randint(60,100)
@@ -91,7 +91,7 @@ class Ui_Dialog(object):
         #print(HeartRate,OxyS,BIS,TEMP)
         Speed=FE.FuzzyEngine_Topic(HeartRate,OxyS,BIS,TEMP)
         self.lineEdit_3.setText(str(Speed['Pump_Speed']))
-        print(Speed)
+        
 
 
 
