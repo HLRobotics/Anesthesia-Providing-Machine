@@ -3,10 +3,17 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import random
 import Fuzzy_Engine_2 as FE
+import serial
+
+try:
+    ser = serial.Serial("COM6", '9600')#Give your arduino common ports here
+    print('[ CONNECTED to HARDWARE ]')
+except:
+    print('[ HARDWARE not CONNECTED ]')
 
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
+class CRGS(object):
+    def crgs(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(501, 231)
         Dialog.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
@@ -99,7 +106,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
+    ui = CRGS()
+    ui.crgs(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
