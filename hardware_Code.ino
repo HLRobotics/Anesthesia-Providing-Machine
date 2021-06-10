@@ -21,9 +21,9 @@ if(Serial.available()>0)
         action.trim();
         Serial.print(action);
         MSG_RXD0=action[0]-48;
-        MSG_RXD1=action[0]-48;
+        MSG_RXD1=action[1]-48;
         MSG_RXD=MSG_RXD0*10+MSG_RXD1;
-        PROCESSED_MSG=((MSG_RXD/90)*100);
+        PROCESSED_MSG=((MSG_RXD/90)*180);
         Serial.println(PROCESSED_MSG);
         VALVE_CONTROLLER.write(PROCESSED_MSG);
 
