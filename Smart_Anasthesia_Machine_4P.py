@@ -99,7 +99,7 @@ class CRGS(object):
         Speed=FE.FuzzyEngine_Topic(HeartRate,OxyS,BIS,TEMP)
         self.lineEdit_3.setText(str(Speed['Pump_Speed']))
         try:
-            ser.write(str.encode(str(Speed)))
+            ser.write(str.encode(str(self.lineEdit_3.text())))
         except:
             print('[ Cannot Connect to the Hardware ]')
         
